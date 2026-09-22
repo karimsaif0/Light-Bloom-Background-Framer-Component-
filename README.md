@@ -1,1 +1,235 @@
-# ✨ Light Bloom — Framer Component\n\nAn atmospheric WebGL light background for Framer, built by **Karim Saif**.\n\nLight Bloom creates soft vertical beams, procedural noise, atmospheric bloom, subtle grain, and cursor-reactive illumination without external animation libraries.\n\n## 🔗 Links\n\n- **Live Preview:** https://lightbloombackground.framer.website/\n- **Framer Community:** https://www.framer.com/community/posts/BRkKxshjMo2icbbGRR3vwQ/\n- **Get the Component:** https://karimsaif.lemonsqueezy.com/checkout/buy/f59a3d97-9858-435c-95b6-ade92a0a433b\n- **GitHub:** https://github.com/karimsaif0/Light-Bloom-Background-Framer-Component-\n- **X:** https://x.com/karimsaif0\n- **Email:** karimsaif010@gmail.com\n\n---\n\n## 🌌 What is Light Bloom?\n\n**Light Bloom Karim Saif** is an interactive WebGL background that turns a simple section into an atmospheric light field.\n\nThe effect is generated procedurally inside a fragment shader. Organic noise creates the beam structure, vertical falloff shapes the light, and pointer movement introduces an additional source of illumination.\n\nThe result is a background that feels alive without relying on image assets.\n\n## ✨ Features\n\n- **WebGL-powered rendering**\n- Procedural animated light rays\n- Atmospheric bloom and soft illumination\n- Cursor-reactive light\n- Built-in film grain\n- Responsive canvas sizing\n- High-DPI rendering with a 2× device-pixel-ratio cap\n- Static-renderer support for Framer previews/export\n- Automatic animation pause when outside the viewport\n- Animation pause when the browser tab is hidden\n- WebGL context-loss handling and recovery\n- No external shader assets\n- No image dependencies\n- Framer Property Controls\n- Custom color controls\n- Ready-made visual presets\n\n## 🎨 Color Presets\n\n| Preset | Character |\n| --- | --- |\n| **Custom** | Build your own palette |\n| **Aurora** | Emerald atmospheric glow |\n| **Violet** | Electric purple bloom |\n| **Ocean** | Cool cyan / blue light |\n| **Ember** | Warm orange / red light |\n| **Ice** | Bright icy blue |\n| **Mono** | Minimal monochrome light |\n\n### Custom Colors\n\nWhen **Color Preset → Custom** is selected:\n\n- **Core Light** — bright center of the beams\n- **Bloom** — primary atmospheric light color\n- **Background** — base color behind the effect\n\n## 🎞️ Animation Presets\n\n- **Slow** — relaxed movement\n- **Smooth** — balanced everyday motion\n- **Flow** — stronger movement and denser rays\n- **Pulse** — faster, more energetic movement\n- **Cinematic** — slower motion with stronger bloom\n- **Static** — no animated time progression\n- **Custom** — manually control animation parameters\n\n## 🎛️ Controls\n\n### Color Preset\nSelect a complete visual palette or switch to **Custom** for individual colors.\n\n### Animation Preset\nChoose a predefined motion style or use **Custom** to manually control speed, glow, and density.\n\n### Core Light\nControls the brightest part of the light beams.\n\n### Bloom\nControls the main atmospheric glow color.\n\n### Background\nSets the underlying background color.\n\n### Glow Intensity\nControls the overall brightness and spread of the light.\n\n### Wave Density\nControls how many vertical light formations appear across the composition.\n\n### Speed\nControls how quickly the procedural light field evolves.\n\n### Grain\nAdds subtle film-grain texture to the final render.\n\n### Mouse Sensitivity\nControls how strongly the light reacts to pointer movement.\n\n## ⚡ Performance\n\nLight Bloom is designed to behave responsibly inside a real Framer page.\n\n- Capped device pixel ratio\n- ResizeObserver for responsive sizing\n- IntersectionObserver to stop rendering when off-screen\n- visibilitychange handling to pause when the tab is hidden\n- Animation-frame cancellation during cleanup\n- WebGL context-loss handling\n- Static rendering behavior for Framer's static renderer\n- A single fullscreen shader pass\n\nThe visual is generated with shader math rather than DOM particles or large image sequences.\n\n## 🧩 Installation\n\n### Option 1 — Use the Framer component\n\nGet the component:\n\nhttps://karimsaif.lemonsqueezy.com/checkout/buy/f59a3d97-9858-435c-95b6-ade92a0a433b\n\n### Option 2 — Use the source\n\nThe main source file is LightBloomKarimSaif.tsx.\n\nCopy the component into a Framer Code Component in a Framer project.\n\n## 🖥️ Recommended Uses\n\n- Hero sections\n- Portfolio introductions\n- Creative agency websites\n- Product launches\n- SaaS landing pages\n- Digital studios\n- Experimental websites\n- Dark-mode interfaces\n- Full-screen sections\n- Interactive presentations\n- Immersive storytelling sections\n\n## 🎯 Design Tips\n\n1. Use a dark background.\n2. Keep the bloom color relatively saturated.\n3. Pair the effect with large typography.\n4. Use **Cinematic** or **Smooth** for subtle movement.\n5. Keep grain low for a cleaner interface.\n6. Place content above the effect with sufficient contrast.\n\nLight Bloom is intentionally atmospheric, so it works best as a visual layer rather than the primary content.\n\n## 📦 Project Structure\n\n- LightBloomKarimSaif.tsx\n- README.md\n\n## 👤 Creator\n\nMade with 💛 by **Karim Saif**\n\n- X: https://x.com/karimsaif0\n- Email: karimsaif010@gmail.com\n\n## 🛠️ Support\n\nFor questions, issues, or Framer implementation help:\n\n**Email:** karimsaif010@gmail.com\n\n**X:** https://x.com/karimsaif0\n\nWhen reporting an issue, include:\n\n- Your Framer project setup\n- The browser/device\n- The component settings you are using\n- A screenshot or short recording when possible\n\n## 📜 License\n\nThis repository contains the source implementation for the Light Bloom Framer component.\n\nPlease respect the original creator's work when redistributing or adapting the component.\n\n---\n\n**Light Bloom Karim Saif** — Procedural light. Atmospheric motion. Built for Framer.
+# ✦ Light Bloom — Karim Saif
+
+<p align="center">
+  <strong>An atmospheric WebGL background for Framer.</strong><br/>
+  Procedural light rays. Soft bloom. Cursor interaction. Zero image assets.
+</p>
+
+<p align="center">
+  <a href="https://lightbloombackground.framer.website/">Live Preview</a>
+  ·
+  <a href="https://karimsaif.lemonsqueezy.com/checkout/buy/f59a3d97-9858-435c-95b6-ade92a0a433b">Get the Component</a>
+  ·
+  <a href="https://www.framer.com/community/posts/BRkKxshjMo2icbbGRR3vwQ/">Framer Community</a>
+</p>
+
+---
+
+## ✦ The effect
+
+Light Bloom turns an ordinary Framer section into a living field of light.
+
+Instead of using a video, image sequence, or collection of DOM elements, the effect is generated in real time with a fullscreen WebGL shader. Procedural noise shapes the vertical rays, atmospheric falloff creates the bloom, and the pointer adds a subtle moving source of light.
+
+The result is designed to sit quietly behind typography, products, portfolios, and immersive landing pages.
+
+## Preview
+
+<p align="center">
+  <a href="https://lightbloombackground.framer.website/">
+    <img src="https://lightbloombackground.framer.website/og-image.png" alt="Light Bloom Karim Saif preview" width="900"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://lightbloombackground.framer.website/">↗ Open the live preview</a>
+</p>
+
+---
+
+## ⚡ Why Light Bloom
+
+| | |
+|---|---|
+| **Procedural** | The light field is generated from shader math instead of image assets. |
+| **Interactive** | Pointer movement becomes a subtle additional light source. |
+| **Responsive** | The canvas follows the size of its Framer container. |
+| **Customizable** | Colors, glow, density, speed, grain, and interaction are exposed as controls. |
+| **Framer-ready** | Built as a Code Component with Property Controls and static-renderer handling. |
+| **Performance-aware** | Rendering pauses when the component leaves the viewport or the page becomes hidden. |
+
+---
+
+## 🎨 Color presets
+
+Choose a complete palette in one click:
+
+| Preset | Feel |
+|---|---|
+| **Aurora** | Emerald atmospheric light |
+| **Violet** | Electric purple bloom |
+| **Ocean** | Cool cyan / blue light |
+| **Ember** | Warm orange / red light |
+| **Ice** | Bright icy blue |
+| **Mono** | Minimal monochrome |
+| **Custom** | Your own three-color palette |
+
+### Custom palette
+
+Switch **Color Preset → Custom** to control:
+
+- **Core Light** — the brightest part of the rays
+- **Bloom** — the main atmospheric light
+- **Background** — the base field behind the effect
+
+---
+
+## ◌ Animation presets
+
+Pick a motion style without touching individual values:
+
+- **Slow** — relaxed movement
+- **Smooth** — balanced everyday motion
+- **Flow** — stronger movement with denser formations
+- **Pulse** — faster, more energetic motion
+- **Cinematic** — slower movement with stronger bloom
+- **Static** — fixed visual for static presentations
+- **Custom** — full manual control
+
+---
+
+## 🎛 Controls
+
+Every important visual parameter is available from Framer's property panel.
+
+| Control | What it does |
+|---|---|
+| **Color Preset** | Selects a complete visual palette. |
+| **Animation Preset** | Selects a ready-made motion style. |
+| **Core Light** | Changes the brightest beam color. |
+| **Bloom** | Changes the main atmospheric color. |
+| **Background** | Sets the base background color. |
+| **Glow Intensity** | Controls overall light strength and spread. |
+| **Wave Density** | Controls the density of the vertical light formations. |
+| **Speed** | Controls how quickly the procedural field evolves. |
+| **Grain** | Adds subtle film-grain texture. |
+| **Mouse Sensitivity** | Controls the strength of pointer interaction. |
+
+---
+
+## ✦ Great for
+
+**Hero sections**  
+Create an atmospheric backdrop behind a headline and CTA.
+
+**Portfolio websites**  
+Add depth without competing with the work.
+
+**Creative studios**  
+Use the moving light field as part of a visual identity.
+
+**Product launches**  
+Give a new product page a cinematic background.
+
+**SaaS landing pages**  
+Add motion to an otherwise minimal interface.
+
+**Experimental websites**  
+Build immersive sections without relying on video.
+
+**Dark interfaces**  
+The glow is especially effective against dark surfaces.
+
+---
+
+## 🧠 Built for Framer
+
+Light Bloom is designed as a real Framer Code Component rather than a static visual.
+
+It includes:
+
+- `addPropertyControls`
+- Static renderer detection
+- Responsive canvas sizing
+- ResizeObserver
+- IntersectionObserver
+- Page visibility handling
+- Device-pixel-ratio cap
+- Animation-frame cleanup
+- WebGL context-loss handling
+- Fullscreen shader rendering
+
+When the component is rendered statically, it does not start an animation loop. When it is live, the animation can pause when it is outside the viewport or when the browser tab is hidden.
+
+---
+
+## 🚀 Get started
+
+### 1. Get the component
+
+**[Purchase Light Bloom](https://karimsaif.lemonsqueezy.com/checkout/buy/f59a3d97-9858-435c-95b6-ade92a0a433b)**
+
+### 2. Add it to Framer
+
+Add the component to your Framer project as a Code Component.
+
+### 3. Make it yours
+
+Start with a preset, then tune the controls to match your layout, colors, and motion direction.
+
+### 4. Put your content above it
+
+Light Bloom works best as a visual layer behind:
+
+- large typography
+- product mockups
+- navigation
+- CTAs
+- cards
+- editorial content
+
+---
+
+## 🪄 Design direction
+
+For a refined result:
+
+1. Start with **Violet**, **Aurora**, or **Mono**.
+2. Use **Smooth** for general-purpose sections.
+3. Try **Cinematic** when the background should feel slower and more premium.
+4. Keep **Grain** subtle.
+5. Give foreground content enough contrast.
+6. Let the light occupy the background rather than competing with the message.
+
+---
+
+## 📁 Source
+
+The main component lives here:
+
+**[LightBloomKarimSaif.tsx](https://github.com/karimsaif0/Light-Bloom-Background-Framer-Component-/blob/main/LightBloomKarimSaif.tsx)**
+
+The implementation is self-contained and uses a fullscreen WebGL shader.
+
+---
+
+## 🔗 Links
+
+| | |
+|---|---|
+| **Live Preview** | https://lightbloombackground.framer.website/ |
+| **Framer Community** | https://www.framer.com/community/posts/BRkKxshjMo2icbbGRR3vwQ/ |
+| **Get Light Bloom** | https://karimsaif.lemonsqueezy.com/checkout/buy/f59a3d97-9858-435c-95b6-ade92a0a433b |
+| **GitHub** | https://github.com/karimsaif0/Light-Bloom-Background-Framer-Component- |
+| **X** | https://x.com/karimsaif0 |
+| **Support** | karimsaif010@gmail.com |
+
+---
+
+## 💛 Created by Karim Saif
+
+**Made with 💛 by Karim Saif**
+
+Designed and customized for Framer by Karim Saif.
+
+For support, questions, or implementation help:
+
+**karimsaif010@gmail.com**  
+**[@karimsaif0](https://x.com/karimsaif0)**
+
+---
+
+<p align="center">
+  <strong>Light Bloom</strong><br/>
+  <sub>Procedural light for immersive Framer experiences.</sub>
+</p>
